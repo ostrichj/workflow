@@ -97,7 +97,6 @@ int TutorialMessage::set_message_body(const void *body, size_t size)
 		return -1;
 
 	memcpy(p, body, size);
-	free(this->body);
 	this->body = (char *)p;
 	this->body_size = size;
 
