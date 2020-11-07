@@ -22,8 +22,6 @@
 #include <stdlib.h>
 #include "workflow/ProtocolMessage.h"
 
-namespace protocol
-{
 
 class TutorialMessage : public ProtocolMessage
 {
@@ -59,15 +57,10 @@ public:
 	TutorialMessage& operator = (TutorialMessage&& msg);
 
 	virtual ~TutorialMessage()
-	{
-		free(this->body);
-	}
+	
 };
 
-using TutorialRequest = TutorialMessage;
-using TutorialResponse = TutorialMessage;
 
-}
 
 #endif
 
